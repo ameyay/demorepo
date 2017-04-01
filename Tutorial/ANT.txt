@@ -1,0 +1,59 @@
+Tasks in ant:
+1. get:
+get task download the data from URL. A psecific file can also be donwloaded from the URL.
+For eg:  <get src="http://cbasvn.kpit.com/kpitcba/CBA_Complete" 
+    dest="CBA_Releases.xlsx" 
+    username="123"
+    password="123"/>
+	
+	
+2. javadoc:
+javadoc task creates the java document fo the java files. Java packages and java source path are required for the input.
+For eg: 	<javadoc destdir="M:\VDI-CBA-0103\Code\LIMAS\docs" classpathref="classpath" packagenames="src"
+			author="false" private="true" version="true" windowtitle="Simple Documentation">
+			<packageset dir="${src.dir}" />
+		</javadoc>
+		
+
+3. tstamp:
+tstamp task gives timestamp and date stamp for the property. For eg:
+<tstamp>
+	<format property="TODAY_GB" pattern="d-MMMM-yy hh:mm aa" locale="en,GB"/>
+</tstamp>
+  
+  In the above example, d-MMMM-yy is the pattern for the date and hh:mm aa is the pattern for the time.
+  locale attribute specifies the langauge in which the date/time should be displayed
+
+4. touch:
+creates file at runtime.
+For eg:
+<touch file="old.txt"/>
+
+
+5. uptodate:
+This task will check if the src file is newer than dest file.
+For eg:
+  <uptodate targetfile="new.txt" srcfile="old.txt" property="new.newer"/>
+ <echo>${new.newer}</echo>
+
+In the above example if file new.txt is latest/updated currently than old.txt file the property new.newer will be set true. The property can alos be set as old.older id targetfile is older than srcfile.
+
+
+6. javac:
+This task will compile the java source code and generate .class file
+<javac srcdir="C:\anttest\example2\src" destdir="C:\anttest\example2\build\src" debug="true" includes="**/*.java" />
+
+The above command will take the source code from srcdir path for compilation and generate the .class file at destdir path.
+The "debug" attribute indicates whether source should be compiled with debug information; defaults to off. If set to off, -g:none will be passed on the command line for compilers that support it (for other compilers, no command line argument will be used). If set to true, the value of the debuglevel attribute determines the command line argument.
+
+7. Jar:
+Creates a jar file.
+ <jar destfile="${dist}/lib/app.jar"
+       basedir="${build}/classes"
+       excludes="**/Test.class"
+  />
+  
+  
+
+
+
