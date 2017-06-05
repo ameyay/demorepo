@@ -1,4 +1,5 @@
 commit 2
+branch commit 3
 commit 3
 
 branch commit 1
