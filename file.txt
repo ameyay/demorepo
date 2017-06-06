@@ -1,7 +1,2 @@
 Commit A
-Commit B
-Commit branch
-commit c
-Commit branch
-Commit D
-commit D
+Commit Bdeleted in branch
