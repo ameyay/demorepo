@@ -1,3 +1,4 @@
 Commit A
 Commit B
 deleted in master
+Commit Bdeleted in branch
