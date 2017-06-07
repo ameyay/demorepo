@@ -3,3 +3,4 @@ Commit B
 deleted in master
 Commit Bdeleted in branch
 added in master
+fetch
